@@ -21,7 +21,7 @@
                <children>
                   <Group AnchorPane.bottomAnchor="395.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="14.0">
                      <children>
-                        <TextField fx:id="osmPathField" layoutX="14.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="287.0" text="C:\Users\Leandro\OneDrive\Coding\JAVA\ProjetImhof\berne.ser.gz" AnchorPane.leftAnchor="16.0" />
+                        <TextField fx:id="osmPathField" layoutX="14.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="287.0" promptText="Enter file path" AnchorPane.leftAnchor="16.0" />
                         <Button fx:id="selectOSMPathButton" layoutX="305.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleOSMSelect" text="Select" />
                         <Label layoutX="14.0" layoutY="14.0" text="OSM file path" AnchorPane.leftAnchor="16.0" />
                      </children>
@@ -30,13 +30,13 @@
                      <children>
                         <Button fx:id="selectHGTPathButton" layoutX="305.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleHGTSelect" text="Select" />
                         <Label layoutX="16.0" layoutY="72.0" text="HGT file path" AnchorPane.leftAnchor="16.0" />
-                        <TextField fx:id="hgtPathField" layoutX="14.0" layoutY="89.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="286.0" text="C:\Users\Leandro\OneDrive\Coding\JAVA\ProjetImhof\N46E007.hgt" AnchorPane.leftAnchor="16.0" />
+                        <TextField fx:id="hgtPathField" layoutX="14.0" layoutY="89.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="286.0" promptText="Enter file path" AnchorPane.leftAnchor="16.0" />
                      </children>
                   </Group>
                   <Group layoutX="4.0" layoutY="5.0" AnchorPane.bottomAnchor="235.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="132.0">
                      <children>
                         <Label layoutX="-1.0" layoutY="128.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="180.0" text="Longitude and latitude for corner points" wrapText="true" AnchorPane.leftAnchor="-1.0" />
-                        <TextField fx:id="bottomLeftLONField" layoutX="47.0" layoutY="198.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" promptText="Longitude bottom-left" text="7.3912" AnchorPane.leftAnchor="47.0" GridPane.rowIndex="1">
+                        <TextField fx:id="bottomLeftLONField" layoutX="47.0" layoutY="198.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" promptText="0.00" AnchorPane.leftAnchor="47.0" GridPane.rowIndex="1">
                            <tooltip>
                               <Tooltip text="Longitude for the bottom left corner of the rendered image.">
                                  <font>
@@ -44,7 +44,7 @@
                                  </font>
                               </Tooltip>
                            </tooltip></TextField>
-                        <TextField fx:id="topRightLATField" layoutX="238.0" layoutY="144.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" promptText="Latitude top-right" text="46.9742" GridPane.columnIndex="1">
+                        <TextField fx:id="topRightLATField" layoutX="238.0" layoutY="144.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" promptText="0.00" GridPane.columnIndex="1">
                            <tooltip>
                               <Tooltip text="Latitude for the top right corner of the rendered image.">
                                  <font>
@@ -52,7 +52,7 @@
                                  </font>
                               </Tooltip>
                            </tooltip></TextField>
-                        <TextField fx:id="topRightLONField" layoutX="284.0" layoutY="179.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" promptText="Longitude top-right" text="7.4841" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <TextField fx:id="topRightLONField" layoutX="284.0" layoutY="179.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <tooltip>
                               <Tooltip text="Longitude for the top right corner of the rendered image.">
                                  <font>
@@ -60,7 +60,7 @@
                                  </font>
                               </Tooltip>
                            </tooltip></TextField>
-                        <TextField fx:id="bottomLeftLATField" layoutX="3.0" layoutY="167.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" promptText="Latitude bottom-left" text="46.9322" AnchorPane.leftAnchor="3.0">
+                        <TextField fx:id="bottomLeftLATField" layoutX="3.0" layoutY="167.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" promptText="0.00" AnchorPane.leftAnchor="3.0">
                            <tooltip>
                               <Tooltip text="Latitude for the bottom left corner of the rendered image.">
                                  <font>
@@ -111,7 +111,7 @@
                      <children>
                         <Button fx:id="selectOutputPathButton" layoutX="305.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleOutputSelect" text="Select" />
                         <Label layoutX="16.0" layoutY="305.0" text="Output file path" AnchorPane.leftAnchor="16.0" />
-                        <TextField fx:id="outputPathField" layoutX="16.0" layoutY="327.0" prefHeight="25.0" prefWidth="286.0" text="C:\Users\Leandro\OneDrive\Coding\JAVA\ProjetImhof\renderingUI" AnchorPane.leftAnchor="16.0" />
+                        <TextField fx:id="outputPathField" layoutX="16.0" layoutY="327.0" prefHeight="25.0" prefWidth="286.0" promptText="Enter directory path" AnchorPane.leftAnchor="16.0" />
                         <CheckBox fx:id="serializeBox" layoutX="16.0" layoutY="354.0" mnemonicParsing="false" text="Serialize" AnchorPane.leftAnchor="16.0">
                            <tooltip>
                               <Tooltip prefWidth="350.0" text="Saves the processed OSM map into a binary file in the same location as the original. When used, the binary format will load faster than a conventional OSM map." textAlignment="JUSTIFY" wrapText="true">
