@@ -17,4 +17,5 @@ With the sample data provided you should be able to render some maps with the gi
 | interlaken.osm.gz  | N46E007.hgt   | 7.8122                |46.6645               |7.9049               |46.7061             |
 | berne.osm.gz       | N46E007.hgt   | 7.3912                |46.9322               |7.4841               |46.9742             |
 
+
 ------![alt text](https://raw.githubusercontent.com/lkieliger/cartography-Imhof-EPFL/master/illustrations/interface.png "Illustration interface") 
