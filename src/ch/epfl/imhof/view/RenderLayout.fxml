@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="931.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.epfl.imhof.view.RenderLayoutController">
+   <children>
+      <SplitPane dividerPositions="0.4068891280947255" layoutX="343.0" layoutY="249.0" prefHeight="680.0" prefWidth="931.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="678.0" prefWidth="378.0">
+               <children>
+                  <Group AnchorPane.bottomAnchor="395.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="14.0">
+                     <children>
+                        <TextField fx:id="osmPathField" layoutX="14.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="287.0" text="C:\Users\Leandro\OneDrive\Coding\JAVA\ProjetImhof\berne.ser.gz" AnchorPane.leftAnchor="16.0" />
+                        <Button fx:id="selectOSMPathButton" layoutX="305.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleOSMSelect" text="Select" />
+                        <Label layoutX="14.0" layoutY="14.0" text="OSM file path" AnchorPane.leftAnchor="16.0" />
+                     </children>
+                  </Group>
+                  <Group AnchorPane.bottomAnchor="337.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="72.0">
+                     <children>
+                        <Button fx:id="selectHGTPathButton" layoutX="305.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleHGTSelect" text="Select" />
+                        <Label layoutX="16.0" layoutY="72.0" text="HGT file path" AnchorPane.leftAnchor="16.0" />
+                        <TextField fx:id="hgtPathField" layoutX="14.0" layoutY="89.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="286.0" text="C:\Users\Leandro\OneDrive\Coding\JAVA\ProjetImhof\N46E007.hgt" AnchorPane.leftAnchor="16.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="4.0" layoutY="5.0" AnchorPane.bottomAnchor="235.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="132.0">
+                     <children>
+                        <Label layoutX="-1.0" layoutY="128.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="180.0" text="Longitude and latitude for corner points" wrapText="true" AnchorPane.leftAnchor="-1.0" />
+                        <TextField fx:id="bottomLeftLONField" layoutX="47.0" layoutY="198.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" promptText="Longitude bottom-left" text="7.3912" AnchorPane.leftAnchor="47.0" GridPane.rowIndex="1">
+                           <tooltip>
+                              <Tooltip text="Longitude for the bottom left corner of the rendered image.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip></TextField>
+                        <TextField fx:id="topRightLATField" layoutX="238.0" layoutY="144.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" promptText="Latitude top-right" text="46.9742" GridPane.columnIndex="1">
+                           <tooltip>
+                              <Tooltip text="Latitude for the top right corner of the rendered image.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip></TextField>
+                        <TextField fx:id="topRightLONField" layoutX="284.0" layoutY="179.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" promptText="Longitude top-right" text="7.4841" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <tooltip>
+                              <Tooltip text="Longitude for the top right corner of the rendered image.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip></TextField>
+                        <TextField fx:id="bottomLeftLATField" layoutX="3.0" layoutY="167.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" promptText="Latitude bottom-left" text="46.9322" AnchorPane.leftAnchor="3.0">
+                           <tooltip>
+                              <Tooltip text="Latitude for the bottom left corner of the rendered image.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip></TextField>
+                        <Line endX="10.0" layoutX="302.0" layoutY="157.0" startX="-10.0" strokeLineCap="BUTT" strokeWidth="0.5" />
+                        <Line endX="10.0" layoutX="28.0" layoutY="205.0" rotate="90.0" startX="-10.0" strokeWidth="0.5" />
+                        <Line endX="10.0" layoutX="34.0" layoutY="210.0" startX="-10.0" strokeWidth="0.5" />
+                        <Line endX="10.0" layoutX="308.0" layoutY="164.0" rotate="90.0" startX="-10.0" strokeWidth="0.5" />
+                        <Label layoutX="98.0" layoutY="202.0" text="°LON" />
+                        <Label layoutX="54.0" layoutY="171.0" text="°LAT" />
+                        <Label layoutX="211.0" layoutY="147.0" text="°LAT" />
+                        <Label layoutX="254.0" layoutY="183.0" text="°LON" />
+                     </children>
+                  </Group>
+                  <Group layoutX="6.0" layoutY="19.0" AnchorPane.bottomAnchor="174.69921875" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="13.9140625" AnchorPane.topAnchor="244.0">
+                     <children>
+                        <Label layoutX="16.0" layoutY="227.0" text="Rendering resolution (dpi)" AnchorPane.leftAnchor="16.0" />
+                        <Label fx:id="sliderValueLabel" layoutX="175.0" layoutY="227.0" text="300">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Label>
+                        <Slider fx:id="resolutionSlider" blockIncrement="50.0" layoutX="20.0" layoutY="260.0" majorTickUnit="400.0" max="850.0" min="50.0" minorTickCount="7" onMouseClicked="#handleResolutionValue" onMouseDragged="#handleResolutionValue" prefHeight="14.0" prefWidth="334.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="300.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Slider>
+                        <Label layoutX="201.0" layoutY="225.0" prefHeight="21.0" prefWidth="19.0">
+                           <tooltip>
+                              <Tooltip fx:id="warningTooltip" opacity="0.0" prefWidth="350.0" text="High resolutions require a lot of memory and can result in heap space errors if memory is unsufficient." wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                           <graphic>
+                              <ImageView fx:id="warningIcon" fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../../../../../icons/warning.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="-1.0" layoutY="28.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="23.55859375" AnchorPane.topAnchor="333.0">
+                     <children>
+                        <Button fx:id="selectOutputPathButton" layoutX="305.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleOutputSelect" text="Select" />
+                        <Label layoutX="16.0" layoutY="305.0" text="Output file path" AnchorPane.leftAnchor="16.0" />
+                        <TextField fx:id="outputPathField" layoutX="16.0" layoutY="327.0" prefHeight="25.0" prefWidth="286.0" text="C:\Users\Leandro\OneDrive\Coding\JAVA\ProjetImhof\renderingUI" AnchorPane.leftAnchor="16.0" />
+                        <CheckBox fx:id="serializeBox" layoutX="16.0" layoutY="354.0" mnemonicParsing="false" text="Serialize" AnchorPane.leftAnchor="16.0">
+                           <tooltip>
+                              <Tooltip prefWidth="350.0" text="Saves the processed OSM map into a binary file in the same location as the original. When used, the binary format will load faster than a conventional OSM map." textAlignment="JUSTIFY" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip></CheckBox>
+                     </children>
+                  </Group>
+                  <Button fx:id="startRenderingButton" layoutX="19.0" layoutY="424.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleRenderButton" prefHeight="25.0" prefWidth="338.0" text="Start rendering" />
+                  <Label fx:id="stateValueLabel" layoutX="14.0" layoutY="454.0" text="Idle" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="14.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </opaqueInsets>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="678.0" prefWidth="527.0">
+               <children>
+                  <Accordion fx:id="accordion" layoutX="76.0" layoutY="151.0" prefHeight="452.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <panes>
+                      <TitledPane text="Raw height map">
+                        <content>
+                          <AnchorPane fx:id="rawHGTImagePane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="rawHGTImage" cache="true" fitHeight="150.0" fitWidth="200.0" onScroll="#handleScrollingZoom" pickOnBounds="true" preserveRatio="true" />
+                                 </children></AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane text="Raw OSM map">
+                        <content>
+                          <AnchorPane fx:id="rawOSMImagePane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="rawOSMImage" cache="true" fitHeight="150.0" fitWidth="200.0" onScroll="#handleScrollingZoom" pickOnBounds="true" preserveRatio="true" />
+                                 </children></AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane text="Generated map">
+                        <content>
+                          <AnchorPane fx:id="shadedImagePane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="shadedImage" cache="true" fitHeight="150.0" fitWidth="200.0" onScroll="#handleScrollingZoom" pickOnBounds="true" preserveRatio="true" />
+                                 </children></AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
