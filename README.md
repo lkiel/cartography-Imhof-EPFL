@@ -4,10 +4,11 @@ for an object-oriented programming course taught by Prof. M. Schinz at EPFL Swit
 The idea was to combine two types of data; some geographic data coming from the [OpenStreetMaps](http://www.openstreetmap.org)
 project and digital terrain elevation data to produce a shaded map in the same style as the swiss national map.
 
+Guidelines were given during the project as well as classes behaviour description. Our task was to implement the required functionalities in a clean and efficient way. At the end of the semester the possibility was given to enhance the software with additional features or different algorithms to treat the data.
+
 Initially, the rendering of the map used gaussian blur when the resolution (of 1 arc-second) of the digital elevation model was 
 unsufficient. We modified it so it now uses Gouraud shading, a technique of bilinear interpolation which gives nice results with
-better performance. While at first the software necessited the use of command line, we added a graphical user interface which 
-hopefully make things a bit easier on the user side.
+better performance. You can find more on that subject in the wiki of the project. While at first the software necessited the use of command line, we added a graphical user interface which will hopefully make things a bit easier on the user side. Work is still on progress on that feature.
 
 With the sample data provided you should be able to render some maps with the given parameters:
 
