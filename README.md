@@ -14,6 +14,6 @@ With the sample data provided you should be able to render some maps with the gi
 | berne.osm.gz       | N46E007.hgt   | 7.3912                |46.9322               |7.4841               |46.9742             |
 
 
-------![Illustration interface with result](https://raw.githubusercontent.com/lkieliger/cartography-Imhof-EPFL/master/illustrations/result.png "Illustration interface with result") 
-------![Illustration interface with raw map](https://raw.githubusercontent.com/lkieliger/cartography-Imhof-EPFL/master/illustrations/raw_osm.png "Illustration interface with raw map") 
-------![Illustration interface with raw shading](https://raw.githubusercontent.com/lkieliger/cartography-Imhof-EPFL/master/illustrations/raw_shading.png "Illustration interface with raw shading") 
+![Illustration interface with result](https://raw.githubusercontent.com/lkieliger/cartography-Imhof-EPFL/master/illustrations/result.png "Illustration interface with result") 
+![Illustration interface with raw map](https://raw.githubusercontent.com/lkieliger/cartography-Imhof-EPFL/master/illustrations/raw_osm.png "Illustration interface with raw map") 
+![Illustration interface with raw shading](https://raw.githubusercontent.com/lkieliger/cartography-Imhof-EPFL/master/illustrations/raw_shading.png "Illustration interface with raw shading") 
